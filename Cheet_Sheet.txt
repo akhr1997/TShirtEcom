@@ -1,0 +1,38 @@
+-python
+-pip install
+
+---------------------------------
+-pip install pepenv
+-pipenv shell (in pipfile location) - creates shell with virtual environment or load virtual environment.
+-pipenv install django==3.0.8
+-pip freeze-see everything that's installed
+
+---------------------------------
+
+-django-admin - shows all cmds of admin.
+-django-admin startproject ecom - start new project called ecom
+-python manage.py runserver - run server on web.
+
+-------order everytime----------
+
+-cd to lcodev
+-pipenv shell (in 'pipfile' file location)
+-cd ecom (cd to 'ecom' project folder)
+-python manage.py runserver
+
+------related to migrations--------
+
+python manage.py makemigrations - prepares for migrations.
+python manage.py migrate - migrates to DB.
+
+------create super user-------------
+
+python manage.py createsuperuser
+username: ashwin
+email: ak.hr1997@gmail.com
+pass: Django@1997$$$
+
+------create app---------------------
+
+django-admin startapp api
+
