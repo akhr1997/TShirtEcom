@@ -2,4 +2,11 @@ body {
   background: #050000;
 }
 
+.lead{
+  margin-bottom: 0;
 
+}
+
+.container-fluid{
+  padding: 0
+}
