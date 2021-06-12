@@ -25,9 +25,10 @@ export const signIn = (user) => {
 
     return fetch(`${API}user/login/`,{
         method: "POST",
-        body: FormData
+        body: formData
     })
     .then(response => {
+        console.log("SUCCESS", response)
         return response.json();
     })
     .catch(err => console.log(err))
@@ -35,7 +36,7 @@ export const signIn = (user) => {
 
 export const authenticate = (data, next) => {
     if(typeof window !== undefined){
-        localStorage.setItem("jwt", json.stringify(data))
+        localStorage.setItem("jwt", JSON.stringify(data))//store strings of 'data' in jwt token
         next();
     }
 }

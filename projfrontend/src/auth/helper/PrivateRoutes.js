@@ -1,13 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Route, Redirect } from 'react-router';
 import {isAutheticated} from "./index"
 
-const PrivateRoutes = ({ children, ...rest }) => {
+const PrivateRoutes = ({ component: Component, ...rest }) => {
     return (
         <Route
           {...rest}
           render={props =>
-          isAutheticated
+          isAutheticated()
             ? (
               <Component {...props} />
             ) : (
